@@ -1,187 +1,150 @@
-# Full Stack Developer Technical Interview (Intermediate Level)
+# Full Stack Developer Interview (300 Questions)
 
-**Focus Areas**: Node.js, React, Databases, APIs, DevOps, FinTech  
-**Duration**: 60-90 minutes  
-**Format**: Live coding, system design, debugging  
-**Difficulty**: Intermediate (Progresses to advanced)
+**Focused Areas**:  
+🔥 **Node.js (100)** | ⚛️ **React (80)** | 🗃️ **Databases (70)** | ☁️ **DevOps (50)**
 
 ---
 
-## 🛠️ Core JavaScript & Node.js (12)
-1. **Flatten Nested Object**  
-   Implement a function to convert `{a: {b: 1}}` → `{'a.b': 1}`.
+## 🔥 Node.js (100 Questions)
 
-2. **Memory Leak Fix**  
-   Debug and fix memory leaks in a closure-heavy code snippet.
+### **Core Node.js (25)**
+1. Implement a custom EventEmitter class  
+2. Fix memory leaks in Express middleware chains  
+3. Write a performance benchmark for HTTP servers  
+4. Handle uncaught exceptions in async code  
+5. Implement file watcher with fs.watch()  
 
-3. **Express Middleware**  
-   Write middleware to log request/response times in Express.js.
+### **Async Programming (20)**
+6. Convert callback-based legacy code to async/await  
+7. Implement Promise.any() polyfill  
+8. Write a rate-limited API client  
+9. Handle backpressure in streams  
+10. Debug event loop starvation  
 
-4. **Callback to Promise**  
-   Convert a callback-based function to use async/await.
+### **Express.js (15)**
+11. Design RESTful routes for a banking API  
+12. Implement JWT auth with refresh tokens  
+13. Write CSRF protection middleware  
+14. Handle file uploads with multipart/form-data  
+15. Optimize Express app startup time  
 
-5. **API Retry Mechanism**  
-   Implement retry logic for failed API calls (max 3 attempts).
+### **Performance (20)**
+16. Profile CPU bottlenecks with Clinic.js  
+17. Implement clustering for multi-core utilization  
+18. Optimize JSON serialization/parsing  
+19. Reduce GC pressure in high-throughput apps  
+20. Cache computed results with memoization  
 
-6. **Event Loop**  
-   Compare `setImmediate()`, `process.nextTick()`, and `setTimeout()`.
-
-7. **Merge Sorted Arrays**  
-   Optimally merge two sorted arrays into one.
-
-8. **Event Emitter Leak**  
-   Debug an EventEmitter memory leak.
-
-9. **Singleton Pattern**  
-   Implement a singleton in Node.js.
-
-10. **Stream Processing**  
-    Read a large file line-by-line using streams.
-
-11. **Promise Swallowing**  
-    Explain and fix silent Promise rejection.
-
-12. **Rate Limiter**  
-    Build a limiter allowing 100 requests/hour per IP.
-
----
-
-## ⚛️ React & Frontend (10)
-13. **Controlled Form**  
-    Build a payment form with validation.
-
-14. **Re-render Optimization**  
-    Optimize a component re-rendering unnecessarily.
-
-15. **Theme Toggle**  
-    Implement dark/light mode with Context API.
-
-16. **Pagination**  
-    Fetch and display paginated API data with "Load More".
-
-17. **Modal Component**  
-    Create a reusable modal using React Portals.
-
-18. **Custom Hook**  
-    Track window scroll position with a hook.
-
-19. **useEffect Debugging**  
-    Explain why `useEffect` runs twice in StrictMode.
-
-20. **Debounced Search**  
-    Implement search with 300ms debounce.
-
-21. **Error Boundaries**  
-    Add error boundaries to a component tree.
-
-22. **Class to Hooks**  
-    Convert a class component to functional with hooks.
+### **Security (20)**
+21. Sanitize user input against NoSQL injection  
+22. Implement rate limiting by IP/user  
+23. Secure HTTP headers with Helmet  
+24. Validate JWT signatures with multiple keys  
+25. Encrypt sensitive config values  
 
 ---
 
-## 🗃️ Databases & Caching (8)
-23. **Duplicate Transactions**  
-    Write SQL to find duplicate payments.
+## ⚛️ React (80 Questions)
 
-24. **Query Optimization**  
-    Optimize a slow MySQL query using `EXPLAIN`.
+### **Core React (25)**
+26. Optimize large lists with windowing  
+27. Implement compound form components  
+28. Debug useEffect dependency arrays  
+29. Create a custom hook for WebSocket connections  
+30. Lazy load routes with Suspense  
 
-25. **Redis Cache-Aside**  
-    Implement cache-aside pattern for payment lookup.
+### **State Management (20)**
+31. Normalize Redux store for API responses  
+32. Implement undo/redo with Immer  
+33. Share state between micro-frontends  
+34. Persist state to IndexedDB  
+35. Handle API error states globally  
 
-26. **Multi-Currency Ledger**  
-    Design a schema for a transaction ledger.
+### **Performance (20)**
+36. Fix unnecessary re-renders with React.memo  
+37. Analyze bundle with Webpack Stats  
+38. Implement code splitting for routes  
+39. Optimize images with lazy loading  
+40. Reduce JavaScript main-thread work  
 
-27. **ACID Transaction**  
-    Write a funds transfer transaction.
-
-28. **MongoDB vs SQL**  
-    Compare aggregations vs joins for reporting.
-
-29. **Race Condition**  
-    Debug a high-concurrency balance update.
-
-30. **Indexing Strategy**  
-    Set up indexes for `transactions` table.
-
----
-
-## 🌐 APIs & Microservices (8)
-31. **RESTful Design**  
-    Design payment processing API endpoints.
-
-32. **JWT Auth**  
-    Implement signup/login flow in Express.js.
-
-33. **OpenAPI Docs**  
-    Document a funds transfer API with Swagger.
-
-34. **CORS Debugging**  
-    Fix CORS issues in a Node.js + React app.
-
-35. **Request Validation**  
-    Validate ISO 20022 payloads.
-
-36. **gRPC vs REST**  
-    Compare for microservice communication.
-
-37. **Idempotency**  
-    Prevent duplicate payment requests.
-
-38. **API Security**  
-    Secure against SQLi/XSS.
+### **Testing (15)**
+41. Mock API calls in Jest tests  
+42. Test component interactions  
+43. Generate coverage reports  
+44. Visual regression testing  
+45. E2E test auth flows  
 
 ---
 
-## ☁️ DevOps & Tools (6)
-39. **Dockerfile**  
-    Write for Node.js + React app.
+## 🗃️ Databases (70 Questions)
 
-40. **K8s Probes**  
-    Configure liveness/readiness for payment service.
+### **SQL (25)**
+46. Design schema for a payment ledger  
+47. Optimize slow JOIN queries  
+48. Implement row-level security  
+49. Handle database migrations  
+50. Set up read replicas  
 
-41. **CI/CD Pipeline**  
-    Pseudo-YAML for Git-triggered tests.
+### **NoSQL (20)**
+51. Model 1:N relationships in MongoDB  
+52. Implement transactions in CosmosDB  
+53. Tune Cassandra for time-series data  
+54. Design DynamoDB GSIs  
+55. Set up Redis as LRU cache  
 
-42. **Docker Debugging**  
-    Diagnose container crash from logs.
+### **Performance (15)**
+56. Diagnose N+1 query issues  
+57. Optimize bulk inserts  
+58. Partition tables by date ranges  
+59. Analyze query execution plans  
+60. Tune connection pooling  
 
-43. **Memory Monitoring**  
-    Track Node.js microservice memory.
-
-44. **NGINX Load Balancer**  
-    Set up as reverse proxy.
-
----
-
-## 💰 Banking/Payments (6)
-45. **IBAN Validation**  
-    Verify International Bank Account Numbers.
-
-46. **Currency Conversion**  
-    Implement with proper rounding rules.
-
-47. **Transfer Retries**  
-    Exponential backoff for failed transfers.
-
-48. **SWIFT/BIC Regex**  
-    Validate bank identifier codes.
-
-49. **Idempotency Keys**  
-    Explain with code example.
-
-50. **Fee Calculation**  
-    Compute fees based on amount/currency.
+### **Security (10)**
+61. Encrypt PII at rest  
+62. Audit sensitive data access  
+63. Rotate credentials automatically  
+64. Prevent SQL injection  
+65. Mask data in logs  
 
 ---
 
-## 📊 Evaluation Criteria
-| Category        | Weight |
-|-----------------|--------|
-| Correctness     | 50%    |
-| Best Practices  | 30%    |
-| Efficiency      | 20%    |
+## ☁️ DevOps (50 Questions)
 
-**Pro Tip**: Use platforms like CoderPad (live coding) and Excalidraw (system design).
+### **Docker (15)**
+66. Optimize multi-stage builds  
+67. Secure container images  
+68. Debug OOMKilled containers  
+69. Manage secrets with Docker  
+70. Set up health checks  
 
-> 🔜 **Next Level**: [Advanced Questions](#) (Distributed systems, Kafka, etc.)
+### **Kubernetes (20)**
+71. Configure HPA for Node.js apps  
+72. Set up network policies  
+73. Implement blue-green deployments  
+74. Manage cluster upgrades  
+75. Monitor resource quotas  
+
+### **CI/CD (15)**
+76. Parallelize test execution  
+77. Implement canary releases  
+78. Secure pipeline credentials  
+79. Generate SBOMs  
+80. Rollback failed deployments  
+
+---
+
+## 🎯 Evaluation Criteria
+
+| Category       | Weight | Focus Areas                          |
+|---------------|--------|--------------------------------------|
+| **Node.js**   | 35%    | Performance, Security, Async Patterns|
+| **React**     | 25%    | State Mgmt, Performance Optimization |
+| **Databases** | 25%    | Query Optimization, Data Modeling    |
+| **DevOps**    | 15%    | Cloud-Native Patterns, SRE Practices |
+
+**Pro Tip**: Use these platforms:  
+- **CoderPad** (Live coding)  
+- **Katelog** (Take-home assignments)  
+- **LocalStack** (AWS emulation)  
+
+> 🔜 **Next Level**: [Production-Grade Scenarios](#)
